@@ -11,5 +11,8 @@ export class AppComponent {
 
   constructor(private _appService:AppService ){ }
 
+  ngOnInit(){
+      
+  }
 
 }
