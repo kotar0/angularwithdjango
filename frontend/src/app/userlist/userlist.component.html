@@ -1,9 +1,19 @@
-<ul>
-    <li *ngFor="let user of userList"
-        class="userlist__item"
-    >
-        <p>{{ user.name }}</p>
-        <p>{{ user.mail }}</p>
-    </li>
+<div class="container">
 
-</ul>
+    <h1 class="userlist__title">
+        Userlist
+    </h1>
+    <ul class="userlist">
+            <li *ngFor="let user of userList"
+            class="userlist__item"
+            >
+            <div class="usericon">
+            </div>
+            <div class="userinfo">
+                <p class="userinfo__ttl">{{ user.name }}</p>
+                <p class="userinfo__sub">{{ user.mail }}</p>
+            </div>
+        </li>
+        
+    </ul>
+</div>
