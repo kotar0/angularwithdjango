@@ -11,13 +11,5 @@ export class AppComponent {
 
   constructor(private _appService:AppService ){ }
 
-    ngOnInit(){
-        this._appService.getEntry().subscribe(
-            res => {
-                console.log(res)
-            }
-        )
-        
-    }
 
 }

@@ -1,0 +1,14 @@
+.wrapper{
+    font-family: sans-serif;    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eee;
+    height: 60px;
+    padding: 0 30px;
+}
+
+.logo{
+    font-family: sans-serif;
+    font-size: 20px;
+}

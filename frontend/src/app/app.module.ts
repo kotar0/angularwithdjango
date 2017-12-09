@@ -8,11 +8,15 @@ import { AppComponent } from './app.component';
 import { AppService } from './app.service'
 
 import { routing } from './app.routing';
+import { HeaderComponent } from './header/header.component';
+import { UserlistComponent } from './userlist/userlist.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    UserlistComponent
   ],
   imports: [
     BrowserModule,
