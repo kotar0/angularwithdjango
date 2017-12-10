@@ -1,12 +1,28 @@
 .container{
     max-width: 1000px;
+    min-width: 800px;
     margin: 0 auto;
     padding-top: 30px;
+}
+
+.userlist__titlearea{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 
 .userlist__title{
     font-size: 50px;
     font-weight: bold;
+}
+
+.btn--char{
+    font-size: initial
+}
+
+.btn--char:hover{
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .userlist{
@@ -15,8 +31,6 @@
     flex-wrap: wrap;
     padding-top: 30px;
 }
-
-
 
 .userlist::after{
     display: block;
@@ -67,5 +81,6 @@
 }
 
 .userinfo__sub{
-
+    font-size: 14px;
 }
+

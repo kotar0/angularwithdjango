@@ -10,13 +10,15 @@ import { AppService } from './app.service'
 import { routing } from './app.routing';
 import { HeaderComponent } from './header/header.component';
 import { UserlistComponent } from './userlist/userlist.component';
+import { FormComponent } from './form/form.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    UserlistComponent
+    UserlistComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
