@@ -9,7 +9,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "jsonserver": "./node_modules/json-server/bin/index.js db.json"
+    "jsonserver": "./node_modules/json-server/bin/index.js db.json",
+    "buildprod": "ng build --prod --output-hashing=none --output-path ../backend/src/static/dist"
   },
   "private": true,
   "dependencies": {
