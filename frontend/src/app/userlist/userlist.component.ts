@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { AppService } from "../app.service";
 
 import { User } from "../interface/User";
+import { error } from "selenium-webdriver";
 
 @Component({
   selector: "app-userlist",
@@ -19,8 +20,9 @@ export class UserlistComponent implements OnInit {
 
   ngOnInit() {
     this._appService.getUsers().subscribe(res => {
-      this.userList = res;
-    });
+          this.userList = res;
+        }
+    );
   }
 
   postUserData(object:User){

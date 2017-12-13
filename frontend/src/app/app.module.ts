@@ -11,6 +11,7 @@ import { routing } from './app.routing';
 import { HeaderComponent } from './header/header.component';
 import { UserlistComponent } from './userlist/userlist.component';
 import { FormComponent } from './form/form.component';
+import { xsrfValue } from './app.security';
 
 
 @NgModule({
@@ -27,7 +28,7 @@ import { FormComponent } from './form/form.component';
   ],
   providers: [AppService , {
       provide : XSRFStrategy,
-      useValue: new CookieXSRFStrategy('CSRF-TOKEN' , 'X-CSRF-TOKEN')
+      useValue: xsrfValue()
   }],
   bootstrap: [AppComponent]
 })

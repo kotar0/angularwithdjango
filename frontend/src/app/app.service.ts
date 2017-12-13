@@ -7,6 +7,7 @@ import { Subject } from 'rxjs/Subject';
 import { environment } from '../environments/environment'
 
 import { User } from './interface/User'
+import { error } from 'util';
 
 @Injectable()
 export class AppService {
@@ -15,7 +16,7 @@ export class AppService {
 
   constructor(private _http:Http) {
       this.environmentFlag = environment.production
-      this.url = this.environmentFlag ? '/api' : 'http://localhost:3000';
+      this.url = this.environmentFlag ? '/api' : 'http://localhost:3000/api';
    }
 
    getUsers(){
