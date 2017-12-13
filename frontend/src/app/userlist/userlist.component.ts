@@ -1,24 +1,33 @@
-import { Component, OnInit } from '@angular/core';
-import { AppService } from '../app.service';
+import { Component, OnInit } from "@angular/core";
+import { AppService } from "../app.service";
 
-import { User } from '../interface/User'
+import { User } from "../interface/User";
 
 @Component({
-  selector: 'app-userlist',
-  templateUrl: './userlist.component.html',
-  styleUrls: ['./userlist.component.css']
+  selector: "app-userlist",
+  templateUrl: "./userlist.component.html",
+  styleUrls: ["./userlist.component.css"]
 })
 export class UserlistComponent implements OnInit {
-    userList:User[]    
+  userList: User[];
+  public postdata:User = {
+    name : "postUser",
+    mail : "email@email.com"
+  }
 
-  constructor(private _appService:AppService) { }
+  constructor(private _appService: AppService) {}
 
-  ngOnInit(){
-    this._appService.getUsers().subscribe(
-          res => {
-              this.userList = res
-        }
+  ngOnInit() {
+    this._appService.getUsers().subscribe(res => {
+      this.userList = res;
+    });
+  }
+
+  postUserData(object:User){
+    this._appService.postUsers(object).subscribe(
+      res => {
+        console.log(res)
+      }
     )
-    }
-
+  }
 }

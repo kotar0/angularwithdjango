@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {HttpModule} from '@angular/http'
+import {HttpModule , XSRFStrategy , CookieXSRFStrategy} from '@angular/http'
 
 
 import { AppComponent } from './app.component';
@@ -25,7 +25,10 @@ import { FormComponent } from './form/form.component';
     HttpModule,
     routing
   ],
-  providers: [AppService],
+  providers: [AppService , {
+      provide : XSRFStrategy,
+      useValue: new CookieXSRFStrategy('CSRF-TOKEN' , 'X-CSRF-TOKEN')
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
